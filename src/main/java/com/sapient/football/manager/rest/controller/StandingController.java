@@ -28,8 +28,8 @@ public class StandingController {
       @RequestParam String teamName
   ) {
     log.info("Received request to fetch standings for countryName {} , leagueName {} and teamName {}", countryName, leagueName, teamName);
-    List<Standing> standings = standingService.getStandings(countryName, leagueName, teamName);
-    return ApiResponse.createSuccessResponse(GetStandingsResponse.from(standings));
+    Standing standing = standingService.getStanding(countryName, leagueName, teamName);
+    return ApiResponse.createSuccessResponse(GetStandingsResponse.from(standing));
   }
 
 }

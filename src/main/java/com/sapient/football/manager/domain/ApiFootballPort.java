@@ -1,4 +1,9 @@
 package com.sapient.football.manager.domain;
 
-public class ApiFootballPort {
+import com.sapient.football.manager.domain.standing.Standing;
+
+import java.util.List;
+
+public interface ApiFootballPort {
+  List<Standing> getStandings(Long id);
 }
