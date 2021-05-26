@@ -1,8 +1,9 @@
 package com.sapient.football.manager.domain.standing;
 
 import com.sapient.football.manager.domain.ApiFootballPort;
-import com.sapient.football.manager.domain.ServiceException;
-import com.sapient.football.manager.domain.StandingException;
+import com.sapient.football.manager.exception.InvalidDataException;
+import com.sapient.football.manager.exception.ServiceException;
+import com.sapient.football.manager.exception.StandingException;
 import com.sapient.football.manager.domain.country.CountryService;
 import com.sapient.football.manager.domain.league.LeagueService;
 import com.sapient.football.manager.enums.ErrorCode;
@@ -36,14 +37,14 @@ public class StandingService {
 
   private void validateRequestData(String countryName, String leagueName, String teamName) {
     if (!StringUtils.hasLength(countryName)) {
-      throw new ServiceException(ErrorCode.S1);
+      throw new InvalidDataException(ErrorCode.S1);
     }
 
     if (!StringUtils.hasLength(leagueName)) {
-      throw new ServiceException(ErrorCode.S2);
+      throw new InvalidDataException(ErrorCode.S2);
     }
     if (!StringUtils.hasLength(teamName)) {
-      throw new ServiceException(ErrorCode.S3);
+      throw new InvalidDataException(ErrorCode.S3);
     }
   }
 }

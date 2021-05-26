@@ -1,4 +1,4 @@
-package com.sapient.football.manager.domain;
+package com.sapient.football.manager.exception;
 
 import com.sapient.football.manager.enums.ErrorCode;
 import lombok.Getter;
