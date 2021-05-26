@@ -18,13 +18,12 @@ public class StandingService {
 
   LeagueService leagueService;
 
-
   public Standing getStanding(String countryName,
                               String leagueName,
                               String teamName) {
     validateRequestData(countryName, leagueName, teamName);
-    var country = countryService.getCountry(countryName);
 
+    var country = countryService.getCountry(countryName);
     var league = leagueService.getLeague(leagueName, country.getId());
 
     var standings = apiFootballPort.getStandings(league.getId());

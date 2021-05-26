@@ -5,7 +5,7 @@ import lombok.Getter;
 @Getter
 public enum ErrorCode {
 
-  E1("Internal Server Error"),,
+  E1("Internal Server Error"),
   S1("country name should not be empty"),
   S2("league name should not be empty"),
   S3("team name should not be empty"),
