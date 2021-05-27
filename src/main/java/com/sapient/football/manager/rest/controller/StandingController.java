@@ -1,6 +1,5 @@
 package com.sapient.football.manager.rest.controller;
 
-import com.sapient.football.manager.domain.standing.Standing;
 import com.sapient.football.manager.domain.standing.StandingService;
 import com.sapient.football.manager.rest.ApiResponse;
 import com.sapient.football.manager.rest.response.GetStandingsResponse;

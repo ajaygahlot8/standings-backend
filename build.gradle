@@ -41,3 +41,8 @@ dependencyManagement {
 test {
 	useJUnitPlatform()
 }
+
+jar {
+	archivesBaseName="manager"
+	project.version=""
+}
