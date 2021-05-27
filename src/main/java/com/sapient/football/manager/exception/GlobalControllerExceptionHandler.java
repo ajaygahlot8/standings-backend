@@ -1,9 +1,11 @@
-package com.sapient.football.manager.rest;
+package com.sapient.football.manager.exception;
 
 import com.sapient.football.manager.exception.InvalidDataException;
 import com.sapient.football.manager.exception.ServiceException;
 import com.sapient.football.manager.exception.StandingException;
 import com.sapient.football.manager.enums.ErrorCode;
+import com.sapient.football.manager.rest.ApiError;
+import com.sapient.football.manager.rest.ApiResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;

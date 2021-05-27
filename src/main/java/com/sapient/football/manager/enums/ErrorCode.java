@@ -9,7 +9,10 @@ public enum ErrorCode {
   S1("country name should not be empty"),
   S2("league name should not be empty"),
   S3("team name should not be empty"),
-  S4("Standing data does not exist for this team");
+  S4("Standing data does not exist for this team"),
+  C1("Standing data does not exist for this customer name"),
+  L1("Standing data does not exist for this league name and customer id");
+
 
 
   private final String message;

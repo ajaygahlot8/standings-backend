@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
 @RestController
 @Slf4j
 public class StandingController {
@@ -28,7 +26,7 @@ public class StandingController {
       @RequestParam String teamName
   ) {
     log.info("Received request to fetch standings for countryName {} , leagueName {} and teamName {}", countryName, leagueName, teamName);
-    Standing standing = standingService.getStanding(countryName, leagueName, teamName);
+    var standing = standingService.getStanding(countryName, leagueName, teamName);
     return ApiResponse.createSuccessResponse(GetStandingsResponse.from(standing));
   }
 
