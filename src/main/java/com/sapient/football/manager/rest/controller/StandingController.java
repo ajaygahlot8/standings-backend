@@ -18,7 +18,7 @@ public class StandingController {
     this.standingService = standingService;
   }
 
-  @GetMapping(value = "/standings")
+  @GetMapping(value = "/standing")
   public ApiResponse<GetStandingsResponse> getStandings(
       @RequestParam String countryName,
       @RequestParam String leagueName,
